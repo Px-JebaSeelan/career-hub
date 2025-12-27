@@ -1,0 +1,156 @@
+/* Global Animation and Variables */
+:root {
+  --primary-color: #4F46E5;
+  /* Indigo 600 */
+  --secondary-color: #10B981;
+  /* Emerald 500 */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --text-dark: #111827;
+  --text-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.auth-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4338ca 0%, #1e1b4b 100%);
+  /* Deep Indigo to Dark Blue */
+  background-size: cover;
+  position: relative;
+}
+
+.auth-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 48px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.auth-header p {
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+/* Material UI Overrides for Dark/Glass Theme */
+.MuiInputBase-root {
+  color: white !important;
+}
+
+.MuiFormLabel-root {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #818cf8 !important;
+  /* Indigo 400 */
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #818cf8 !important;
+  /* Indigo 400 */
+}
+
+/* Button Styling */
+.auth-btn {
+  background: linear-gradient(to right, #4F46E5, #4338ca) !important;
+  border-radius: 9999px !important;
+  /* Full pill */
+  color: white !important;
+  padding: 12px 30px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  /* Modern feel */
+  font-size: 1rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.2s ease !important;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(to right, #4338ca, #3730a3) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.auth-link {
+  color: #818cf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+/* Tab Styling for Register */
+.MuiTabs-indicator {
+  background-color: #818cf8 !important;
+  /* Indigo 400 */
+}
+
+.MuiTab-textColorInherit.Mui-selected {
+  color: white !important;
+  font-weight: 600;
+}
+
+.MuiTab-textColorInherit {
+  color: rgba(255, 255, 255, 0.5) !important;
+}

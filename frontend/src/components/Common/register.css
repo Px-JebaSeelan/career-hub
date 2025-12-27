@@ -1,0 +1,11 @@
+body{
+    background-color:gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+::selection
+{
+	background: rgb(112, 114, 216);
+	color: #fff;
+}
