@@ -1,4 +1,4 @@
-const User = require("../models/Users");
+const User = require("../models/users");
 const bcrypt = require("bcryptjs");
 
 // Get all users
@@ -78,7 +78,7 @@ const loginUser = async (req, res) => {
 
         // Check in Recruiter collection
         if (!user) {
-            const Recruiter = require("../models/Recruiters");
+            const Recruiter = require("../models/recruiters");
             user = await Recruiter.findOne({ email });
             collection = 'Recruiter';
         }
@@ -124,7 +124,7 @@ const loginUser = async (req, res) => {
         }
     } catch (err) {
         console.error("Login error:", err);
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({ error: "Internal Server Error", details: err.message });
     }
 };
 

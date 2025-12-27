@@ -1,5 +1,5 @@
 const Application = require("../models/applications");
-const Job = require("../models/Jobs");
+const Job = require("../models/jobs");
 const nodemailer = require('nodemailer');
 
 // Send Email Helper

@@ -14,9 +14,9 @@
     |-- models
         |-- applicants.js
         |-- applications.js
-        |-- Jobs.js
+        |-- jobs.js
         |-- recruiters.js
-        |-- Users.js
+        |-- users.js
     |-- package-lock.json
     |-- package.json
     |-- public
