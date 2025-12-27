@@ -49,6 +49,11 @@ mongoose.connect(dbName, {
     console.log('2. If you have a cloud MongoDB URL, add it to backend/.env as MONGO_URI');
 });
 
+// Health check endpoint (keeps server warm)
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'Server is running' });
+});
+
 // setup API endpoints
 app.use("/testAPI", testAPIRouter);
 app.use("/user", UserRouter);

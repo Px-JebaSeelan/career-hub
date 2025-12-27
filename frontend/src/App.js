@@ -22,13 +22,26 @@ import MyEmployees from './components/Common/my_employees';
 import RateApplicant from './components/Common/rate_my_employee';
 import Home from './components/Common/Home';
 import axios from 'axios';
+import API_URL from './api_config';
 
 // Check for token to keep user logged in
 if (localStorage.getItem('token')) {
   axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
 }
 
+// Wake up server on app load (for Render free tier)
+const wakeUpServer = () => {
+  axios.get(`${API_URL}/health`)
+    .then(() => console.log('✓ Server is awake'))
+    .catch(() => console.log('Server initializing...'));
+};
+
 class App extends React.Component {
+  componentDidMount() {
+    // Wake up server as soon as app loads
+    wakeUpServer();
+  }
+
   render() {
     let user_type = localStorage.getItem('user_type');
     let navbar = null;
