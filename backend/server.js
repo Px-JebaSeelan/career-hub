@@ -25,7 +25,8 @@ app.use('/cv', express.static(path.join(__dirname, 'public/cv')));
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://your-vercel-frontend-url.vercel.app',
+    'http://localhost:5000',
+    /\.vercel\.app$/,  // Allow all Vercel URLs
     process.env.FRONTEND_URL
   ],
   credentials: true
