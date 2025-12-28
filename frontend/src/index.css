@@ -6,7 +6,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -313,4 +314,126 @@ h6 {
 .badge-neutral {
   background-color: var(--border);
   color: var(--text-secondary);
+}
+
+/* ================================= */
+/* Mobile Responsive - Navbar        */
+/* ================================= */
+
+@media (max-width: 768px) {
+  .navbar-glass {
+    width: 92%;
+    top: 0.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .nav-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .brand-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-items {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-glass {
+    width: 95%;
+    top: 0.4rem;
+    border-radius: 1rem;
+  }
+
+  .nav-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-items {
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .nav-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+  }
+}
+
+/* ================================= */
+/* Mobile Responsive - Forms         */
+/* ================================= */
+
+@media (max-width: 768px) {
+  .form-input {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ================================= */
+/* Mobile Responsive - Tables        */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .glass-table th,
+  .glass-table td {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .glass-table th,
+  .glass-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+  }
 }

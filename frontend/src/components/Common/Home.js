@@ -244,27 +244,142 @@ const Home = () => {
                     margin-top: auto;
                 }
 
-                /* Responsive */
+                /* Responsive - Tablet */
                 @media (max-width: 900px) {
                     .hero-section {
                         flex-direction: column;
                         text-align: center;
-                        padding-top: 8rem;
+                        padding: 6rem 5% 3rem;
+                        min-height: auto;
                     }
                     .hero-content {
                         max-width: 100%;
                         margin-bottom: 3rem;
                     }
+                    .hero-title {
+                        font-size: 2.8rem;
+                    }
+                    .hero-subtitle {
+                        font-size: 1.1rem;
+                        max-width: 100%;
+                    }
                     .hero-visual {
                         width: 100%;
-                        height: 400px;
+                        height: 350px;
                     }
                     .cta-group {
                         justify-content: center;
                     }
                     .float-card {
-                        width: 160px;
+                        width: 150px;
+                        font-size: 0.85rem;
+                        padding: 1.2rem;
+                    }
+                    .features-section {
+                        padding: 3rem 5%;
+                    }
+                    .section-title {
+                        font-size: 2rem;
+                    }
+                }
+
+                /* Responsive - Mobile */
+                @media (max-width: 600px) {
+                    .hero-section {
+                        padding: 5rem 4% 2rem;
+                    }
+                    .hero-title {
+                        font-size: 2rem;
+                    }
+                    .hero-subtitle {
+                        font-size: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                    .cta-group {
+                        flex-direction: column;
+                        gap: 1rem;
+                        width: 100%;
+                    }
+                    .btn-lg {
+                        padding: 0.9rem 2rem;
+                        font-size: 1rem;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .hero-visual {
+                        height: 280px;
+                    }
+                    .float-card {
+                        width: 120px;
+                        padding: 1rem;
+                        font-size: 0.75rem;
+                    }
+                    .float-card h4 {
                         font-size: 0.9rem;
+                    }
+                    .float-card p {
+                        font-size: 0.7rem;
+                    }
+                    .icon {
+                        font-size: 1.8rem;
+                    }
+                    .card-1 {
+                        top: 5%;
+                        left: 5%;
+                    }
+                    .card-2 {
+                        top: 35%;
+                        right: 5%;
+                    }
+                    .card-3 {
+                        bottom: 5%;
+                        left: 30%;
+                    }
+                    .features-section {
+                        padding: 2.5rem 4%;
+                    }
+                    .section-title {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    .features-grid {
+                        grid-template-columns: 1fr;
+                        gap: 1.5rem;
+                    }
+                    .feature-card {
+                        padding: 1.8rem;
+                    }
+                    .feature-icon {
+                        font-size: 2.5rem;
+                        margin-bottom: 1rem;
+                    }
+                    .feature-card h3 {
+                        font-size: 1.2rem;
+                    }
+                    .feature-card p {
+                        font-size: 0.9rem;
+                    }
+                    .home-footer {
+                        padding: 1.5rem 1rem;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                /* Responsive - Small Mobile */
+                @media (max-width: 400px) {
+                    .hero-title {
+                        font-size: 1.7rem;
+                    }
+                    .hero-visual {
+                        height: 220px;
+                    }
+                    .float-card {
+                        width: 100px;
+                        padding: 0.8rem;
+                    }
+                    .icon {
+                        font-size: 1.5rem;
+                        margin-bottom: 0.3rem;
                     }
                 }
             `}</style>
